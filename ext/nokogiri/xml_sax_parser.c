@@ -241,6 +241,7 @@ static void processing_instruction(void * ctx, const xmlChar * name, const xmlCh
 {
   VALUE self = NOKOGIRI_SAX_SELF(ctx);
   VALUE doc = rb_iv_get(self, "@document");
+
   rb_funcall( doc,
               id_processing_instruction,
               2,
