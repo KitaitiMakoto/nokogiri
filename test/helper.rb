@@ -143,9 +143,9 @@ module Nokogiri
           super
         end
 
-        def processing_instruction target, data
+        def processing_instruction name, content
           @processing_instructions ||= []
-          @processing_instructions << [target, data]
+          @processing_instructions << [name, content]
         end
       end
     end
