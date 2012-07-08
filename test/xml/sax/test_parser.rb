@@ -312,7 +312,7 @@ module Nokogiri
           @parser.parse_memory(<<-eoxml)
             <?xml-stylesheet href="a.xsl" type="text/xsl"?>
           eoxml
-          assert_equal [['xml-stylesheet', [['href', 'a.xsl'], ['type', 'text/xml']]]],
+          assert_equal [['xml-stylesheet', 'href="a.xsl" type="text/xsl"']],
                        @parser.document.processing_instructions
         end
 
